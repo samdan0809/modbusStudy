@@ -1,0 +1,16 @@
+modbusStudy/obj/Debug
+modbusStudy/obj/Release
+modbusStudy/bin/Debug
+modbusStudy/bin/Release
+modbusStudy/obj/x86/Debug
+modbusStudy/obj/x86/Release
+modbusStudy/obj/ARM/Debug
+modbusStudy/obj/ARM/Release
+modbusStudy/obj/Win32/Debug
+modbusStudy/obj/Win32/Release
+modbusStudy/obj/x64/Debug
+modbusStudy/obj/x64/Release
+modbusStudy/obj/AnyCPU/Debug
+modbusStudy/obj/AnyCPU/Release
+
+packages/*
