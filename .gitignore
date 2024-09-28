@@ -14,3 +14,4 @@ modbusStudy/obj/AnyCPU/Debug
 modbusStudy/obj/AnyCPU/Release
 
 packages/*
+.vs
