@@ -1,6 +1,6 @@
 ﻿namespace modbusStudy
 {
-    partial class Form1
+    partial class EasyModBusNet_Demo
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -44,23 +44,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt_ip_slave = new System.Windows.Forms.TextBox();
-            this.txt_port_slave = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.data_0 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.data_3 = new System.Windows.Forms.TextBox();
-            this.data_2 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.data_1 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.data_8 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.data_9 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
             this.data_5 = new System.Windows.Forms.TextBox();
             this.data_6 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -69,14 +58,29 @@
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.data_4 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
-            this.data_8 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.data_9 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.data_1 = new System.Windows.Forms.TextBox();
+            this.data_2 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.data_3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.data_0 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_ip_slave = new System.Windows.Forms.TextBox();
+            this.txt_port_slave = new System.Windows.Forms.TextBox();
             this.timer_slave = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -198,12 +202,12 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.numericUpDown2);
             this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Location = new System.Drawing.Point(53, 34);
+            this.groupBox1.Location = new System.Drawing.Point(532, 40);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(433, 497);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "主站";
+            this.groupBox1.Text = "主站 - master";
             // 
             // button4
             // 
@@ -224,6 +228,15 @@
             this.button2.Text = "连接";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(296, 203);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 12);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "数据";
             // 
             // groupBox2
             // 
@@ -254,147 +267,44 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txt_ip_slave);
             this.groupBox2.Controls.Add(this.txt_port_slave);
-            this.groupBox2.Location = new System.Drawing.Point(562, 34);
+            this.groupBox2.Location = new System.Drawing.Point(23, 40);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(433, 497);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "从站";
+            this.groupBox2.Text = "从站-slave";
             // 
-            // button5
+            // data_8
             // 
-            this.button5.Location = new System.Drawing.Point(218, 40);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(98, 56);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "运行从站";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.data_8.Location = new System.Drawing.Point(216, 418);
+            this.data_8.Name = "data_8";
+            this.data_8.Size = new System.Drawing.Size(50, 21);
+            this.data_8.TabIndex = 37;
             // 
-            // label6
+            // textBox19
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 47);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(17, 12);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "IP";
+            this.textBox19.Location = new System.Drawing.Point(135, 418);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.ReadOnly = true;
+            this.textBox19.Size = new System.Drawing.Size(50, 21);
+            this.textBox19.TabIndex = 36;
+            this.textBox19.Text = "8";
             // 
-            // label7
+            // data_9
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 84);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 12);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "端口";
+            this.data_9.Location = new System.Drawing.Point(216, 452);
+            this.data_9.Name = "data_9";
+            this.data_9.Size = new System.Drawing.Size(50, 21);
+            this.data_9.TabIndex = 35;
             // 
-            // txt_ip_slave
+            // textBox21
             // 
-            this.txt_ip_slave.Location = new System.Drawing.Point(82, 40);
-            this.txt_ip_slave.Name = "txt_ip_slave";
-            this.txt_ip_slave.Size = new System.Drawing.Size(97, 21);
-            this.txt_ip_slave.TabIndex = 8;
-            this.txt_ip_slave.Text = "127.0.0.1";
-            // 
-            // txt_port_slave
-            // 
-            this.txt_port_slave.Location = new System.Drawing.Point(82, 77);
-            this.txt_port_slave.Name = "txt_port_slave";
-            this.txt_port_slave.Size = new System.Drawing.Size(97, 21);
-            this.txt_port_slave.TabIndex = 7;
-            this.txt_port_slave.Text = "502";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(135, 153);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(50, 21);
-            this.textBox2.TabIndex = 15;
-            this.textBox2.Text = "0";
-            // 
-            // data_0
-            // 
-            this.data_0.Location = new System.Drawing.Point(216, 153);
-            this.data_0.Name = "data_0";
-            this.data_0.Size = new System.Drawing.Size(50, 21);
-            this.data_0.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(296, 203);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 12);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "数据";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(222, 125);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 12);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "数据";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(141, 125);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 12);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "位置";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(135, 252);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(50, 21);
-            this.textBox4.TabIndex = 20;
-            this.textBox4.Text = "3";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(135, 185);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(50, 21);
-            this.textBox5.TabIndex = 19;
-            this.textBox5.Text = "1";
-            // 
-            // data_3
-            // 
-            this.data_3.Location = new System.Drawing.Point(216, 252);
-            this.data_3.Name = "data_3";
-            this.data_3.Size = new System.Drawing.Size(50, 21);
-            this.data_3.TabIndex = 22;
-            // 
-            // data_2
-            // 
-            this.data_2.Location = new System.Drawing.Point(216, 218);
-            this.data_2.Name = "data_2";
-            this.data_2.Size = new System.Drawing.Size(50, 21);
-            this.data_2.TabIndex = 24;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(135, 218);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(50, 21);
-            this.textBox9.TabIndex = 23;
-            this.textBox9.Text = "2";
-            // 
-            // data_1
-            // 
-            this.data_1.Location = new System.Drawing.Point(216, 185);
-            this.data_1.Name = "data_1";
-            this.data_1.Size = new System.Drawing.Size(50, 21);
-            this.data_1.TabIndex = 25;
+            this.textBox21.Location = new System.Drawing.Point(135, 452);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.ReadOnly = true;
+            this.textBox21.Size = new System.Drawing.Size(50, 21);
+            this.textBox21.TabIndex = 34;
+            this.textBox21.Text = "9";
             // 
             // data_5
             // 
@@ -460,42 +370,161 @@
             this.textBox17.TabIndex = 26;
             this.textBox17.Text = "4";
             // 
-            // data_8
+            // data_1
             // 
-            this.data_8.Location = new System.Drawing.Point(216, 418);
-            this.data_8.Name = "data_8";
-            this.data_8.Size = new System.Drawing.Size(50, 21);
-            this.data_8.TabIndex = 37;
+            this.data_1.Location = new System.Drawing.Point(216, 185);
+            this.data_1.Name = "data_1";
+            this.data_1.Size = new System.Drawing.Size(50, 21);
+            this.data_1.TabIndex = 25;
             // 
-            // textBox19
+            // data_2
             // 
-            this.textBox19.Location = new System.Drawing.Point(135, 418);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(50, 21);
-            this.textBox19.TabIndex = 36;
-            this.textBox19.Text = "8";
+            this.data_2.Location = new System.Drawing.Point(216, 218);
+            this.data_2.Name = "data_2";
+            this.data_2.Size = new System.Drawing.Size(50, 21);
+            this.data_2.TabIndex = 24;
             // 
-            // data_9
+            // textBox9
             // 
-            this.data_9.Location = new System.Drawing.Point(216, 452);
-            this.data_9.Name = "data_9";
-            this.data_9.Size = new System.Drawing.Size(50, 21);
-            this.data_9.TabIndex = 35;
+            this.textBox9.Location = new System.Drawing.Point(135, 218);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(50, 21);
+            this.textBox9.TabIndex = 23;
+            this.textBox9.Text = "2";
             // 
-            // textBox21
+            // data_3
             // 
-            this.textBox21.Location = new System.Drawing.Point(135, 452);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.ReadOnly = true;
-            this.textBox21.Size = new System.Drawing.Size(50, 21);
-            this.textBox21.TabIndex = 34;
-            this.textBox21.Text = "9";
+            this.data_3.Location = new System.Drawing.Point(216, 252);
+            this.data_3.Name = "data_3";
+            this.data_3.Size = new System.Drawing.Size(50, 21);
+            this.data_3.TabIndex = 22;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(135, 252);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(50, 21);
+            this.textBox4.TabIndex = 20;
+            this.textBox4.Text = "3";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(135, 185);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(50, 21);
+            this.textBox5.TabIndex = 19;
+            this.textBox5.Text = "1";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(141, 125);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 12);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "位置";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(222, 125);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 12);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "数据";
+            // 
+            // data_0
+            // 
+            this.data_0.Location = new System.Drawing.Point(216, 153);
+            this.data_0.Name = "data_0";
+            this.data_0.Size = new System.Drawing.Size(50, 21);
+            this.data_0.TabIndex = 16;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(135, 153);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(50, 21);
+            this.textBox2.TabIndex = 15;
+            this.textBox2.Text = "0";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(218, 40);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(98, 56);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "运行从站";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(22, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(17, 12);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "IP";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(22, 84);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 12);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "端口";
+            // 
+            // txt_ip_slave
+            // 
+            this.txt_ip_slave.Location = new System.Drawing.Point(82, 40);
+            this.txt_ip_slave.Name = "txt_ip_slave";
+            this.txt_ip_slave.Size = new System.Drawing.Size(97, 21);
+            this.txt_ip_slave.TabIndex = 8;
+            this.txt_ip_slave.Text = "127.0.0.1";
+            // 
+            // txt_port_slave
+            // 
+            this.txt_port_slave.Location = new System.Drawing.Point(82, 77);
+            this.txt_port_slave.Name = "txt_port_slave";
+            this.txt_port_slave.Size = new System.Drawing.Size(97, 21);
+            this.txt_port_slave.TabIndex = 7;
+            this.txt_port_slave.Text = "502";
             // 
             // timer_slave
             // 
             this.timer_slave.Interval = 200;
             this.timer_slave.Tick += new System.EventHandler(this.timer_slave_Tick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.ToolStripMenuItem3});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1144, 25);
+            this.menuStrip1.TabIndex = 14;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ToolStripMenuItem3
+            // 
+            this.ToolStripMenuItem3.Name = "ToolStripMenuItem3";
+            this.ToolStripMenuItem3.Size = new System.Drawing.Size(114, 21);
+            this.ToolStripMenuItem3.Text = "Nmodbus版演示";
+            this.ToolStripMenuItem3.Click += new System.EventHandler(this.ToolStripMenuItem3_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(108, 21);
+            this.toolStripMenuItem1.Text = "IotClient 版演示";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -504,14 +533,18 @@
             this.ClientSize = new System.Drawing.Size(1144, 566);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
-            this.Text = "modbus tcp 演示";
+            this.Text = "modbus tcp 演示 -- easyModbus";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -562,6 +595,9 @@
         private System.Windows.Forms.TextBox data_9;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Timer timer_slave;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

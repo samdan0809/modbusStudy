@@ -5,6 +5,15 @@ using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using IoTClient.Clients.Modbus;
+
+using NModbus;
+using NModbus.Device;
+using System.Net;
+using System.Net.Sockets;
+
+using System.Net.Sockets;
 namespace modbusStudy
 {
     public class helper
@@ -32,5 +41,26 @@ namespace modbusStudy
 
             return server;
         }
+
+        public static ModbusTcpClient getIotClient(string ip, int port)
+        {
+            var client = new ModbusTcpClient(ip,port);
+            return client;
+        }
+      
+        public static IModbusMaster getNClient(string ip, int port)
+        {
+            var tcpClient = new TcpClient( );
+            tcpClient.Connect(ip, port);
+
+          
+            var factory = new NModbus.ModbusFactory();
+            var client=factory.CreateMaster(tcpClient);
+
+            
+
+            return client;
+        }
+
     }
 }

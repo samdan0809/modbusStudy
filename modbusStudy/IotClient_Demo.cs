@@ -8,16 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EasyModbus;
+using IoTClient.Clients.Modbus;
 using Microsoft.Win32;
 namespace modbusStudy
 {
-    public partial class Form1 : Form
+    public partial class IotClient_Demo : Form
     {
-        ModbusServer server=null;
+   
 
-        ModbusClient client = null;
-        public Form1()
+        ModbusTcpClient client = null;
+        public IotClient_Demo()
         {
             InitializeComponent();
         }
@@ -34,13 +34,12 @@ namespace modbusStudy
                     return;
                 }
 
-                int[] result = client.ReadHoldingRegisters((int)numericUpDown2.Value, 1);  //寄存器初始地址号
-                StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < result.Length; i++)
+                var result = client.ReadInt16(numericUpDown2.Value.ToString());  //寄存器初始地址号
+                if (result.IsSucceed)
                 {
-                    builder.Append(Convert.ToString(result[i]) + "\n");
+                    richTextBox1.Text = Convert.ToString(result.Value);
                 }
-                richTextBox1.Text = builder.ToString();
+               
 
             }
             catch (Exception ex)
@@ -67,7 +66,8 @@ namespace modbusStudy
                     return;
                 }
                 var data = Convert.ToInt16(textBox1.Text);
-                client.WriteSingleRegister((int)numericUpDown2.Value, data);
+              
+                client.Write(numericUpDown2.Value.ToString(),data);
 
 
             }
@@ -96,38 +96,17 @@ namespace modbusStudy
             button1_Click(sender, e);
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            server = helper.getServer(int.Parse(txt_port_slave.Text));
-
-            var me=(Button)sender;
-            if (me.Text.Contains("运行从站")){
-                server.Listen();
-                timer_slave.Start();
-                
-              
-
-                me.Text = "停止运行";
-            }
-            else
-            {
-                if (server!=null  )
-                server.StopListening();
-                timer_slave.Stop();
-                me.Text = "运行从站";
-            }
-            
-
-        }
+      
 
         
 
         private void button2_Click(object sender, EventArgs e)
         {
             if (client==null)
-                client =helper. getClient(txt_ip.Text,int.Parse(txt_port.Text));
+                client =helper.getIotClient(txt_ip.Text,int.Parse(txt_port.Text));
             try {
-                client.Connect();
+
+                client.Open();
             }
             catch (Exception ex)
             {
@@ -141,31 +120,8 @@ namespace modbusStudy
         private void button4_Click(object sender, EventArgs e)
         {
             if (client != null)
-                client.Disconnect();
+                client.Close();
           
         }
-
-        private void timer_slave_Tick(object sender, EventArgs e)
-        {
-            if (button5.Text.Contains("停止"))
-            {
-                for (int i = 0; i < 10; i++)
-                {
-
-                    short val = server.holdingRegisters[i+1];
-
-
-                    var controls = this.Controls.Find("data_" + i, true);
-                    if (controls != null && controls.Length > 0)
-                    {
-                        controls[0].Text = val.ToString();
-                    }
-                }
-               
-            }
-        }
-       
-
-        
     }
 }
